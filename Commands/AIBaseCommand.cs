@@ -73,6 +73,8 @@ namespace AI_Studio
             {
                 Model = generalOptions.LanguageModel switch
                 {
+                    // 2024.11.13 add xAI grok-beta Model
+                    ChatLanguageModel.xAI_Grok_Beta => new Model("grok-beta") { OwnedBy = "xai" },
                     ChatLanguageModel.GPT4 => Model.GPT4,
                     ChatLanguageModel.GPT4_32k_Context => Model.GPT4_32k_Context,
                     ChatLanguageModel.GPT4_Turbo => Model.GPT4_Turbo,
